@@ -1,0 +1,17 @@
+Feature: Pay Bills
+
+
+  @PayBills
+  Scenario: Account Activity page should have the title Zero – Pay Bills
+
+    Given the user is on the login page
+    When the user enters valid credentials
+    And click on sing in button
+    Then click Account Activity button
+    Then click Pay Bills button
+    Then Activity page should have the title "Zero – Pay Bills"
+    When the user enters valid credentials on pays bills page
+    Then the user successful Pay operation, "The payment was successfully submitted"
+    Then without entering the amount or date, "Please fill out this field message!"
+
+
